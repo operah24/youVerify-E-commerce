@@ -1,8 +1,7 @@
 const { AppError } = require('../utils/customError');
 
 const errorHandler = (err, req, res, next) => {
-  let error = { ...err };
-  error.message = err.message;
+  let error = err;
 
   // Log error for debugging
   console.error('Error:', err);
@@ -20,8 +19,8 @@ const errorHandler = (err, req, res, next) => {
     error = new AppError(message, 409);
   }
 
-  // Mongoose validation error
-  if (err.name === 'ValidationError') {
+  // Mongoose validation error (but not our custom ValidationError)
+  if (err.name === 'ValidationError' && !err.statusCode) {
     const messages = Object.values(err.errors).map(val => val.message);
     error = new AppError(messages.join(', '), 400);
   }
