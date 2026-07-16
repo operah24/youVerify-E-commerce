@@ -14,22 +14,19 @@ const seedProducts = async () => {
         name: 'Laptop Computer',
         description: 'High-performance laptop with 16GB RAM and 512GB SSD',
         price: 1299.99,
-        stock: 50,
-        imageUrl: 'https://example.com/laptop.jpg'
+        stockQuantity: 50
       },
       {
         name: 'Wireless Mouse',
         description: 'Ergonomic wireless mouse with adjustable DPI',
         price: 29.99,
-        stock: 200,
-        imageUrl: 'https://example.com/mouse.jpg'
+        stockQuantity: 200
       },
       {
         name: 'Mechanical Keyboard',
         description: 'RGB mechanical keyboard with blue switches',
         price: 89.99,
-        stock: 100,
-        imageUrl: 'https://example.com/keyboard.jpg'
+        stockQuantity: 100
       }
     ]);
 
