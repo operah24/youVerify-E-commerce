@@ -296,7 +296,7 @@ npm run dev
 
 ### Order Creation Request
 
-**Endpoint:** `POST /api/orders`
+**Endpoint:** `POST /orders`
 
 **Request Body:**
 ```json
@@ -324,7 +324,7 @@ npm run dev
 
 ### Payment Processing
 
-**Endpoint:** `POST /api/payments`
+**Endpoint:** `POST /payments`
 
 **Request Body:**
 ```json
